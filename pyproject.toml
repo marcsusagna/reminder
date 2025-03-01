@@ -1,0 +1,20 @@
+[project]
+name = "reminder"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "marcsusagna",email = "marcsusagna@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit (>=1.42.2,<2.0.0)",
+    "schedule (>=1.2.2,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
