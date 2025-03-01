@@ -2,5 +2,6 @@
 Triggers alerts to correct posture during desk time
 
 Todo: 
-- Add scheduler
-- Modify to run on WSL or windows directly
+- Create entrypoint poetry instead of calling python script
+- Run on docker instead of WSL to allow multiplatform 
+- Abstract executables and constants 
