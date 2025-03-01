@@ -1,3 +1,8 @@
-from src.utils import dummy_util
+from plyer import notification
 
-dummy_util()
+notification.notify(
+    title="Hello!",
+    message="This is your notification.",
+    app_name="Python App",
+    timeout=5
+)
