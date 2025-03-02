@@ -2,9 +2,11 @@ import subprocess
 import time
 import schedule
 
+SERVER_PORT='8502'
+
 def run_webapp():
     subprocess.Popen(
-        ['streamlit', 'run', 'app.py', '--server.port',  '8502'],
+        ['streamlit', 'run', 'app.py', '--server.port',  SERVER_PORT],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
@@ -19,8 +21,9 @@ def schedule_tasks():
         schedule.run_pending()
         time.sleep(1)
 
-#def run_reminders():
-
-if __name__ == "__main__":
+def run_reminders():
     run_webapp()
     schedule_tasks()
+
+if __name__ == "__main__":
+    run_reminders()
