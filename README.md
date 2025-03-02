@@ -1,7 +1,7 @@
 # reminder
-Triggers alerts to correct posture during desk time. 
+Triggers alerts to correct posture during desk time when working on Windows. 
 
-It runs on docker but leverages the host OS windows to open browser
+Can run in these two setups:
+- WSL: See scripts/wsl_run_reminder
+- Docker: See scripts/run_docker.sh
 
-Todo: 
-- Run on docker instead of WSL to allow multiplatform 
