@@ -13,10 +13,10 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "src"}]
+packages = [{include = "app"}]
 
 [tool.poetry.scripts]
-remind_me = "orchestrator:run_reminders"
+remind_me = "main:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
