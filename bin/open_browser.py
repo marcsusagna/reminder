@@ -1,8 +1,15 @@
 import subprocess
+import sys
 
-from config import SERVER_PORT, BROWSER_EXE_PATH
+import config as conf
 
+url = f"http://localhost:{conf.SERVER_PORT}/"
 
-url = f"http://localhost:{SERVER_PORT}/"
+if sys.platform=='win32':
+    browser_exe=conf.BROWSER_WIN_EXE_PATH
+elif sys.platform=='linux':
+    browser_exe=conf.BROWSER_LINUX_EXE_PATH
+else:
+    raise Exception('App is intended to run on windows or linux container/wsl in windows')
 
-subprocess.run([BROWSER_EXE_PATH, '--new-window', url])
+subprocess.run([browser_exe, '--new-window', url])
