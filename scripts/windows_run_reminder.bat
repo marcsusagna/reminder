@@ -1,6 +1,5 @@
 @echo off
-:: modify path where the repository is
-cd workspace\reminder && ^
+:: Assumes executed from scripts/ folder
+cd .. && ^
 poetry install && ^
 poetry run remind_me
-pause
