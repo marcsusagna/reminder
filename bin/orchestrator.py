@@ -27,5 +27,6 @@ def run_reminders(interval):
     schedule_tasks(interval)
 
 if __name__ == "__main__":
+    print(sys.path)
     interval=int(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_INTERVAL
     run_reminders(interval)
