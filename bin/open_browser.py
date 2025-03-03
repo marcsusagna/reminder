@@ -15,4 +15,5 @@ elif sys.platform=='linux':
 else:
     raise Exception('App is intended to run on windows or linux container/wsl in windows')
 
-subprocess.run([browser_exe, '--new-window', url])
+if __name__ == "__main__":
+    subprocess.run([browser_exe, '--new-window', url])

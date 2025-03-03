@@ -10,7 +10,7 @@ def main():
     parser.add_argument('--seconds', type=int, default=conf.DEFAULT_INTERVAL, help='Notify every given seconds')
     args = parser.parse_args()
 
-    subprocess.run(['python3', 'bin/orchestrator.py', str(args.seconds)])
+    subprocess.run(['python3', 'bin/run_reminders.py', str(args.seconds)])
 
 if __name__ == "__main__":
     main()
