@@ -1,13 +1,16 @@
 import subprocess
 import sys
+import os
 import time
 import schedule
 
-from config import SERVER_PORT, DEFAULT_INTERVAL
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+import config as conf
 
 def run_webapp():
     subprocess.Popen(
-        ['streamlit', 'run', 'app/app.py', '--server.port',  SERVER_PORT, '> /dev/null'],
+        ['streamlit', 'run', 'app/app.py', '--server.port',  conf.SERVER_PORT],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
@@ -27,6 +30,5 @@ def run_reminders(interval):
     schedule_tasks(interval)
 
 if __name__ == "__main__":
-    print(sys.path)
-    interval=int(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_INTERVAL
+    interval=int(sys.argv[1]) if len(sys.argv) > 1 else conf.DEFAULT_INTERVAL
     run_reminders(interval)
