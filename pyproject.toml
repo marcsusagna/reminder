@@ -16,7 +16,7 @@ dependencies = [
 packages = [{include = "app"}]
 
 [tool.poetry.scripts]
-remind_me = "main:main"
+start_app = "bin.start_app:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
