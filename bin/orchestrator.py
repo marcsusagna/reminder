@@ -7,7 +7,7 @@ from config import SERVER_PORT, DEFAULT_INTERVAL
 
 def run_webapp():
     subprocess.Popen(
-        ['streamlit', 'run', 'app/app.py', '--server.port',  SERVER_PORT],
+        ['streamlit', 'run', 'app/app.py', '--server.port',  SERVER_PORT, , '> /dev/null'],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
